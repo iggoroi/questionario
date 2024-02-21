@@ -1,8 +1,8 @@
 export default class Router {
     constructor() {
         this.routes = [
-            { path: "", page: "/homepage" },
-            { path: "pic1", page: "/pic1" },
+            { path: "", page: "/homepage", style: "/homepage" },
+            { path: "pic1", page: "/pic1", style: "/pic1" },
         ];
         this.init();
     }
@@ -14,7 +14,7 @@ export default class Router {
 
     findRoute(uri) {
         const route = this.routes.find(route => route.path == uri)
-        return route || { path: "404", page: "/404" };
+        return route || { path: "404", page: "/404", style: "/404" };
     }
 
     init() {
@@ -30,7 +30,17 @@ export default class Router {
 
         await fetch("./pages".concat(foundRoute.page).concat(".html"))
             .then(res => res.text())
-            .then(text => document.querySelector("outlet").innerHTML = text)
+            .then(text => {
+                const outlet = document.querySelector("outlet");
+                const style = document.createElement("link");
+                style.setAttribute("href", `${"/style".concat(foundRoute.style).concat(".css")}`);
+                style.setAttribute("rel", "stylesheet");
+                const page = document.createElement("page");
+                page.innerHTML = text;
+                outlet.appendChild(style)
+                outlet.appendChild(page)
+
+            })
             .catch(console.log)
     }
 
