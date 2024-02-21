@@ -1,0 +1,55 @@
+page {
+  display: flex;
+  flex-direction: column;
+  padding: 3vw 15vw;
+  gap: 150px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+header h1 {
+  flex: 1;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+main > div {
+  width: 200px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+}
+
+main > div > div {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 1vmin;
+}
+
+main > div > div > * {
+  height: 100%;
+  width: 100%;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main > div > h2 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 20px;
+}

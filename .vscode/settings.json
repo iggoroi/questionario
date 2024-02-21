@@ -1,0 +1,10 @@
+{
+  "liveServer.settings.file": "index.html",
+  "liveServer.settings.middleware": "./.vscode/middleware.js",
+  "liveServer.settings.mount": [
+    ["/src", "/src/"],
+    ["/pages", "/pages/"],
+    ["/style", "/style/"],
+    ["/style.css", "/style.css"]
+  ]
+}
