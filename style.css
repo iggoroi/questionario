@@ -1,2 +1,19 @@
+@import "style/_nf-icons.css";
 @import "style/_reset.css";
 @import "style/_font-face.css";
+
+button {
+  background-color: hsl(230deg, 50%, 50%);
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 1vmin;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: white;
+}
+
+icon {
+  font-family: "icons" !important;
+}

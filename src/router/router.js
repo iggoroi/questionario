@@ -2,7 +2,7 @@ export default class Router {
     constructor() {
         this.routes = [
             { path: "", page: "/homepage", style: "/homepage" },
-            { path: "configurazione", page: "/configurazione", style: "/configurazione"}
+            { path: "configurazione", page: "/configurazione", style: "/configurazione" }
         ];
         this.init();
     }
@@ -42,11 +42,16 @@ export default class Router {
 
             })
             .catch(console.log)
-        document.dispatchEvent(new CustomEvent("changedRoute"));
+
+        document.dispatchEvent(new CustomEvent("changedRoute", {
+            detail: {
+                page: foundRoute.path,
+            }
+        }));
     }
 
     navigate(uri) {
         window.history.pushState({}, '', uri);
-        this.init(uri);
+        this.init();
     }
 }

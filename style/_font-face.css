@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "icons";
+  src: url("/style/font/Symbols-2048-em\ Nerd\ Font\ Complete.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  line-height: 16px;
+  font-size: 13px;
+}
+
 .large-title {
   font-size: 26px;
   line-height: 32px;
@@ -5,14 +18,17 @@
 
 .title-1 {
   font-size: 22px;
+  line-height: 26px;
 }
 
 .title-2 {
   font-size: 17px;
+  line-height: 22px;
 }
 
 .title-3 {
   font-size: 15px;
+  line-height: 20px;
 }
 
 .headline {
@@ -20,16 +36,19 @@
 }
 
 .callout {
+  line-height: 15px;
   font-size: 12px;
 }
 
 .subhead {
+  line-height: 14px;
   font-size: 11px;
 }
 
 .footnote,
 .caption-1,
 .caption-2 {
+  line-height: 13px;
   font-size: 10px;
 }
 
