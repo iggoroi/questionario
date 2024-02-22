@@ -2,7 +2,6 @@ export default class Router {
     constructor() {
         this.routes = [
             { path: "", page: "/homepage", style: "/homepage" },
-            { path: "pic1", page: "/pic1", style: "/pic1" },
             { path: "configurazione", page: "/configurazione", style: "/configurazione"}
         ];
         this.init();
@@ -38,15 +37,16 @@ export default class Router {
                 style.setAttribute("rel", "stylesheet");
                 const page = document.createElement("page");
                 page.innerHTML = text;
-                outlet.appendChild(style)
-                outlet.appendChild(page)
+                outlet.replaceChildren(style);
+                outlet.appendChild(page);
 
             })
             .catch(console.log)
+        document.dispatchEvent(new CustomEvent("changedRoute"));
     }
 
     navigate(uri) {
         window.history.pushState({}, '', uri);
-        this.load(uri);
+        this.init(uri);
     }
 }

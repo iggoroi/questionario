@@ -1,12 +1,14 @@
-import Router from "./router/router.js"
+import Router from "./router/router.js";
 const router = new Router();
 
-window.addEventListener('popstate', () => {
-    router.init();
+window.addEventListener("popstate", () => {
+  router.init();
 });
 
-const handleClick = document.getElementById("icona");
-
-handleClick.addEventListener('click', () => {
-    router.navigate("/configurazione");
-  });
+document.addEventListener("changedRoute", _=>{
+    const handleClick = document.getElementById("icona");
+  
+    handleClick.addEventListener("click", () => {
+      router.navigate("configurazione");
+    });
+})
