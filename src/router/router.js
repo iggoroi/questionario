@@ -3,6 +3,7 @@ export default class Router {
         this.routes = [
             { path: "", page: "/homepage", style: "/homepage" },
             { path: "pic1", page: "/pic1", style: "/pic1" },
+            { path: "configurazione", page: "/configurazione", style: "/configurazione"}
         ];
         this.init();
     }
