@@ -20,7 +20,7 @@ main {
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 50px;
 }
 
 main > div {
@@ -37,6 +37,7 @@ main > div > div {
   height: 200px;
   border: 1px solid black;
   border-radius: 1vmin;
+  overflow: hidden;
 }
 
 main > div > div > * {

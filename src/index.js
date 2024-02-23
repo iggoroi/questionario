@@ -1,4 +1,4 @@
-import Router from "./router/router.js";
+import Router from "/src/router/router.js";
 const router = new Router();
 
 window.addEventListener("popstate", () => {
@@ -6,17 +6,5 @@ window.addEventListener("popstate", () => {
 });
 
 document.addEventListener("changedRoute", e => {
-    console.log(e)
-    switch (e.detail.page) {
-        case "": initHomepage();
-        default: ;
-    }
+    import("/src/pages".concat(e.detail.page).concat(".js")).then(page => page.init()).catch(console.log);
 })
-
-function initHomepage() {
-    const aggiungi = document.querySelector("#aggiungi");
-
-    aggiungi.addEventListener("click", () => {
-        router.navigate("configurazione");
-    });
-}
