@@ -5,6 +5,7 @@
     ["/src", "/src/"],
     ["/pages", "/pages/"],
     ["/style", "/style/"],
+    ["/data", "/data/"],
     ["/style.css", "/style.css"]
   ]
 }
