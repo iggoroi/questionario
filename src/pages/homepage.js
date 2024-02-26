@@ -10,7 +10,7 @@ export function init() {
         .then(data => data.json())
         .then(json => {
             json.forEach(quest => {
-                const url = quest.url;
+                const id = quest.id;
                 const card = document.createElement("div");
                 card.innerHTML = `
                     <div class="icona">
@@ -19,7 +19,7 @@ export function init() {
                     <h2 class="title-2 enphatized">${quest.nome}</h2>
                 `
                 card.addEventListener("click", _ => {
-                    router.navigate("/quest/".concat(url.split("/").pop()));
+                    router.navigate("/quest/".concat(id.split("/").pop()));
                 })
                 document.querySelector("main").appendChild(card);
             });

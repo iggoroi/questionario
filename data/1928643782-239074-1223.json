@@ -1,3 +1,28 @@
 {
-  "caca": "culo"
+  "owner": "BIG David",
+  "titolo": "Persona 3",
+  "domande": [
+    {
+      "testo": "Am I cooked?",
+      "tipo": "radio",
+      "opzioni": ["Sì", "No"],
+      "correct": [0]
+    },
+    {
+      "testo": "Chi tra questi sono membri della Squadra Ginew?",
+      "tipo": "checkbox",
+      "opzioni": ["Ginew", "Goku", "Guido", "Antonino"],
+      "correct": [0, 2]
+    },
+    {
+      "testo": "Parlami dello swag",
+      "tipo": "text",
+      "correct": "mammita"
+    },
+    {
+      "testo": "Parlami dello swag",
+      "tipo": "textarea",
+      "correct": "mammita"
+    }
+  ]
 }

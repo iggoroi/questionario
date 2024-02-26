@@ -2,6 +2,10 @@
 @import "style/_reset.css";
 @import "style/_font-face.css";
 
+body {
+  background-color: #dedcff;
+}
+
 button {
   background-color: hsl(230deg, 50%, 50%);
   min-width: 44px;

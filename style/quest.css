@@ -1,0 +1,120 @@
+page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3vw;
+  gap: 10px;
+}
+
+page > * {
+  max-width: 800px;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#intestazione,
+fieldset {
+  overflow: hidden;
+  border-radius: 2vmin;
+  background-color: whitesmoke;
+}
+
+fieldset {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  display: flex;
+  line-height: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+textarea,
+input[type="text"] {
+  max-width: 100%;
+  resize: vertical;
+  background-color: white;
+  font-size: 15px;
+  padding-top: 10px;
+  border-bottom: 2px solid #433bff;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="radio"]::before,
+input[type="checkbox"]::before {
+  content: "";
+  font-family: "icons";
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border: 2px solid #433bff;
+  border-radius: 5px;
+}
+
+input[type="radio"]::before {
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked::before,
+input[type="checkbox"]:checked::before {
+  content: "";
+  color: white;
+  border-color: #433bff;
+  background-color: hsl(230deg, 50%, 50%);
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  font-size: 10px;
+}
+
+#intestazione {
+  padding-bottom: 20px;
+}
+
+#intestazione::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 30px;
+  background-color: red;
+}
+
+#intestazione h1 {
+  margin-top: 20px;
+}
+
+#intestazione > * {
+  padding: 0 20px;
+}
+
+button {
+  width: fit-content;
+  align-self: flex-end;
+}
