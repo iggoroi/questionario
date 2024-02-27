@@ -5,9 +5,10 @@ export default class Router {
         if (Router.instance) return Router.instance;
         this.routes = [
             { path: "", page: "/homepage", style: "/homepage" },
+            { path: "/", page: "/homepage", style: "/homepage" },
             { path: "configurazione", page: "/configurazione", style: "/configurazione" },
             { path: "quest", page: "/quest", style: "/quest" },
-            { path: "login", page: "/login", style: "/login"}
+            { path: "login", page: "/login", style: "/login" }
         ];
         this.init();
         Router.instance = this

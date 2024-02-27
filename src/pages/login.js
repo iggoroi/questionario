@@ -1,13 +1,12 @@
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("login").onclick = function () {
-        const username = document.getElementById("username").value
-        const password = document.getElementById("password").value
+import Router from "/src/router/router.js";
+const router = new Router();
 
-        if (username === 'admin' && password === 'admin') {
-            window.location.href='/';
-            /* router.navigate('/'); */
-        }else{
-            alert("Credenziali errate!");
-        }
-    };
-});z
+export function init() {
+    document.querySelector("form").addEventListener("submit", e => {
+        console.log("scemo", e.target)
+        e.preventDefault();
+
+
+
+    });
+}
