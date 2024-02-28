@@ -8,7 +8,8 @@ export default class Router {
             { path: "/", page: "/homepage", style: "/homepage" },
             { path: "configurazione", page: "/configurazione", style: "/configurazione" },
             { path: "quest", page: "/quest", style: "/quest" },
-            { path: "login", page: "/login", style: "/login" }
+            { path: "login", page: "/login", style: "/login" },
+            { path: "signin", page: "/registrazione", style: "/registrazione" },
         ];
         this.init();
         Router.instance = this

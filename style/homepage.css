@@ -24,7 +24,8 @@ main {
 }
 
 main > div {
-  width: 200px;
+  width: min(200px, 65vw);
+  height: min(200px, 65vw);
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -33,8 +34,8 @@ main > div {
 }
 
 main > div > div {
-  width: 200px;
-  height: 200px;
+  width: min(200px, 65vw);
+  height: min(200px, 65vw);
   border: 1px solid black;
   border-radius: 1vmin;
   overflow: hidden;
@@ -56,4 +57,17 @@ main > div > h2 {
   width: 100%;
   margin-bottom: 20px;
   text-align: center;
+}
+
+@media (max-width: 642px) {
+  main > div {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 350px) {
+  text {
+    display: none;
+  }
 }

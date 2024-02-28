@@ -25,4 +25,6 @@ export function init() {
             });
         })
         .catch(console.log);
+
+    document.querySelector("button").addEventListener("click", _ => router.navigate("/login"));
 }
